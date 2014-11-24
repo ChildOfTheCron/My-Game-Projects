@@ -1,0 +1,29 @@
+% start S
+# ####################
+# Grammar Productions
+# 
+# Sentance Productions
+# ####################
+S[SEM=(?vp + WHERE + ?np)] -> VP[SEM=?vp] NP[SEM=?np] 
+S[SEM=(?re)] -> RE[SEM=?re]
+S[SEM=(?af)] -> AF[SEM=?af]
+# Other Grammar Prods
+# ####################
+VP[SEM=(?det + ?pv)] -> Det[SEM=?det] PV[SEM=?pv] 
+PV[SEM=(?av + ?vv)] -> AV[SEM=?av] VV[SEM=?vv]
+VV[SEM=(?pn + ?vl)] -> PN[SEM=?pn] VL[SEM=?vl]
+VL[SEM=(?v + ?n)] -> V[SEM=?v] N[SEM=?n]
+NP[SEM=(?p + ?np)] -> P[SEM=?p] NP[SEM=?np]
+# ####################
+# Lexical Productions
+# ####################
+NP[SEM="DisplayName='Crystal'"] -> 'Crystals'
+Det[SEM='SELECT'] -> 'Which' | 'What' | 'Where'
+N[SEM='ID FROM KnowledgeBase'] -> 'displays' | 'information' | 'data'
+V[SEM=''] -> 'find' | 'locate' | 'see'
+PN[SEM=''] -> 'I'| 'we' | 'they'
+AV[SEM=''] -> 'can' | 'will'
+P[SEM=''] -> 'about' | 'on'
+Q[SEM=''] -> '?'
+RE[SEM='Rejection'] -> 'No'
+AF[SEM='Affirmation'] -> 'Yes'
